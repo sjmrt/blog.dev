@@ -3,6 +3,14 @@
 
 This is a blog written in PHP, JS, jQuery, and CSS on the Laravel framework.  
 
+##Getting Started
+- Clone this repository
+- Create a database for this application
+- Create a .env.local.php inside of `blog.dev`
+- Add the contents of `env-template.php` to `.env.local.php`
+- Add your database logins to to the values
+- Run `composer install`
+
 ## Official Documentation
 
 Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).

@@ -11,7 +11,25 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'HomeController@showHome');
+
+Route::get('/resume', 'HomeController@showResume');
+
+Route::get('/portfolio2', 'HomeController@showPortfolio');
+
+Route::get('/sayhello/{name?}', 'HomeController@showSayHello');
+
+Route::get('/rolldice/{guess?}', 'HomeController@showRollDice');
+
+Route::get('/home', 'HomeController@showHome');
+
+Route::get('login', 'HomeController@getLogin');
+
+Route::post('login', 'HomeController@postLogin');
+
+Route::get('logout', 'HomeController@getLogout');
+
+Route::resource('/blog', 'PostsController'); 
+
+
+
