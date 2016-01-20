@@ -18,7 +18,7 @@
           	</div>
           	<div id="navbar" class="navbar-collapse collapse">
             	<ul class="nav navbar-nav navbar-right">
-              		<li><a href="./">Home</a></li>
+              		<li><a href="{{{action('HomeController@showHome')}}}">Home</a></li>
               		<li><a href="{{{ action('HomeController@showResume') }}}">Resume</a></li>
               		<li><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
               		<li><a href="{{{ action('PostsController@index') }}}">Blog</a></li>
@@ -26,10 +26,8 @@
           	</div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
     </nav>
-	<div class="jumbotron" id="jumbocat">
-	    <div class="container" id="fourohfour"></div>
-	    <h1>404 Not Found!</h1>
-	</div>
+	    <div class="jumbotron" id="fourohfour"><hr><h1>404 Not Found!</h1><hr></div>
+	    
 </div>
 
 @stop

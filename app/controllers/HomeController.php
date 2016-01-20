@@ -19,7 +19,7 @@ class HomeController extends BaseController {
 	{
 		if(Auth::check()) {
 			Session::flash('errorMessage', 'You are already logged in!');
-			return Redirect::action('HomeController@showHome');
+			return Redirect::action('PostsController@showIndex');
 		}
 		return View::make('login');
 	}
@@ -44,7 +44,7 @@ class HomeController extends BaseController {
 	{
 		Auth::logout();
 		Session::flash('successMessage', 'You have successfully logged out.');
-		return Redirect::to('/');
+		return Redirect::action('HomeController@getLogin');
 	}
 
 	public function showWelcome()

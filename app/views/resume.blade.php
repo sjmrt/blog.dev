@@ -36,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Sarajane Stevens</a>
+                <a class="navbar-brand" href="#">Sarajane</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -47,40 +47,21 @@
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
-      </nav>
-      <hr>
+        </nav>
+        <hr>
         <div id="header" class="row">
             <div class="col-sm-2">
                 <img class="propic" src="img/profilepic.png" alt="">
             </div>
-
             <div class="col-sm-10">
                 <div class="cv-title">
                     <div class="row">
                         <div class="col-sm-7">
                             <h1>Sarajane Stevens</h1>
                         </div>
-                        <div class="col-sm-5 text-right dl-share">
-                            <!-- AddToAny BEGIN -->
-                            <a class="a2a_dd btn btn-default" href=""><span class="fa fa-share "></span> Share</a>
-                            <script type="text/javascript">
-                                var a2a_config = a2a_config || {};
-                                a2a_config.linkname = "Minimal CV by EvenFly";
-                                a2a_config.num_services = 6;
-                                a2a_config.prioritize = ["facebook", "twitter", "google_plus", "linkedin", "pinterest", "email"];
-                            </script>
-                            <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-                            <!-- AddToAny END -->
-
-                            <a class="btn btn-success" href=""><span class="fa fa-download"></span> Download</a>
-                        </div>
                     </div>
                     <h2>Web Developer</h2>
                 </div><!-- Title end-->
-
-                <!-- ===========================
-                SOCIAL & CONTACT
-                ============================ -->
                 <div class="row">
                     <div class="col-sm-4">
                         <ul class="list-unstyled">
@@ -90,9 +71,9 @@
                     </div>
                     <div class="col-sm-4">
                         <ul class="list-unstyled">
-                            <li><a href=""><span class="social fa fa-github"></span>GitHub</a>
+                            <li><a href="http://www.github.com/sjmrt"><span class="social fa fa-github"></span>GitHub</a>
                             </li>
-                            <li><a href=""><span class="social fa fa-linkedin"></span>Linkedin</a>
+                            <li><a href="https://www.linkedin.com/in/sarajane-stevens-33345152?trk=nav_responsive_tab_profile_pic"><span class="social fa fa-linkedin"></span>Linkedin</a>
                             </li>
                         </ul>
                     </div>
@@ -107,18 +88,26 @@
                 </div><!-- header social end-->
             </div><!-- header right end-->
         </div><!-- header end-->
-
         <hr class="firsthr">
-
-        <!-- ===========================
-        BODY LEFT PART
-        ============================ -->
         <div class="col-md-12 mainleft">
+            <div id="skills" class="row mobmid">
+                <div class="col-sm-1">
+                    <span class="secicon fa fa-magic"></span>
+                </div><!--icon end-->
+                <div class="col-sm-11">
+                    <h3>Technical Skills</h3>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3><p>Linux, Apache, MySQL, PHP, HTML/CSS, JavaScript, jQuery, Laravel MVC, Vagrant dev environment, Sequel Pro, Git/Github, Twitter Bootstrap</p></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
             <div id="statement" class="row mobmid">
                 <div class="col-sm-1">
                     <span class="secicon fa fa-user"></span>
                 </div><!--icon end-->
-
                 <div class="col-sm-11">
                     <h3>About Me </h3>
                     <p></p>
@@ -128,9 +117,7 @@
                     <p class="signature">Sarajane</p>
                 </div><!--info end-->
             </div><!--personal statement end-->
-
             <hr>
-
             <div id="education" class="row mobmid">
                 <div class="col-sm-1">
                     <span class="secicon fa fa-graduation-cap"></span>
@@ -151,9 +138,7 @@
                             <p>2015-2016</p>
                         </div>
                     </div><!--Education & Certification 1 end-->
-                    
                     <hr>
-                    
                     <div class="row">
                         <div class="col-md-9">
                             <h4>Technical Courses</h4>
@@ -176,7 +161,6 @@
 
                 <div class="col-sm-11">
                     <h3>Job Experience</h3>
-
                     <div class="row">
                         <div class="col-md-9">
                             <h4>Project Manager</h4>
@@ -188,14 +172,11 @@
                             <p>Managing client expectations by ensuring the delivery of the highest quality service  and acting on client feedback.</p>  
                             <p>Monitoring staff & team performance. Oversee all hiring of new employees</p> 
                         </div>
-
                         <div class="year col-md-3">
                             <p>2013-2015</p>
                         </div>
                     </div><!--Job 1 end-->
-                    
                     <hr>
-                    
                     <div class="row">
                         <div class="col-md-9">
                             <h4>Technical Account Manager</h4>
@@ -208,14 +189,11 @@
                             <p>Perform technical server work during deployments and network issues</p>
                             <p>Experience with Microsoft Office applications (Word, Excel, PowerPoint, Outlook</p>
                         </div>
-
                         <div class="year col-md-3">
                             <p>2011-2013</p>
                         </div>
                     </div><!--Job 2 end-->
-                    
                     <hr>
-                    
                        <div class="row">
                         <div class="col-md-9">
                         <h4>Enterprise Linux Technician</h4>
@@ -226,7 +204,6 @@
                         <p>Perform log troubleshooting, restarting and installation of services</p>
                         <p>Schedule and perform server maintenances, kernel upgrades and patching</p>
                         </div>
-
                         <div class="year col-md-3">
                             <p>2008-2011</p>
                         </div>
@@ -234,55 +211,9 @@
                 </div><!--Job experiences end-->
             </div><!--Job experiences end-->
             <hr>
-        </div><!--left end-->  
-        <div class="col-md-4 mainright">
-            <div class="row">
-                <div class="col-sm-1 col-md-2 mobmid">
-                    <span class="secicon fa fa-magic"></span>
-                </div><!--icon end-->
+            </div><!--left end-->  
 
-                <div class="col-sm-11 col-md-10">
-                    <h3 class="mobmid">Technical skills </h3>
-                    
-                    <p>PHP</p>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
-                            <span class="sr-only">65% Complete (success)</span>
-                        </div>
-                    </div><!--skill end-->
-
-
-                    <p>JavaScript</p>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                            <span class="sr-only">85% Complete</span>
-                        </div>
-                    </div>
-
-                    <p>HTML/CSS</p>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                            <span class="sr-only">60% Complete (warning)</span>
-                        </div>
-                    </div>
-
-                    <p>MySQL</p>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-                            <span class="sr-only">30% Complete (danger)</span>
-                        </div>
-                    </div>
-
-                    <p>Laravel</p>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                            <span class="sr-only">70% Complete (success)</span>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
 @stop
 
 @section('bottom-script')

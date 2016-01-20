@@ -16,6 +16,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">Sarajane Stevens</a>
           </div>
@@ -25,6 +26,14 @@
               <li><a href="{{{ action('HomeController@showResume') }}}">Resume</a></li>
               <li><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
               <li class="active"><a href="{{{ action('PostsController@index') }}}">Blog<span class="sr-only">(current)</span></a></li>
+              @if(!Auth::check())
+              <li><a href="{{{ action('HomeController@getLogin') }}}">Login</a>
+              </li>
+              @endif
+              @if(Auth::check())
+              <li><a href="{{{ action('HomeController@getLogout')}}}">Logout</a>
+              </li>
+              @endif
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -55,8 +64,6 @@
                 <hr>
                 @endforeach
 
-                <hr>
-
                 <div class="">
                     {{ $posts->links() }}
                 </div>
@@ -66,53 +73,18 @@
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4">
 
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Search the Borg</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
-
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Career</a>
-                                </li>
-                                <li><a href="#">Domesticity</a>
-                                </li>
-                                <li><a href="#">Star Trek</a>
-                                </li>
-                                <li><a href="#">Animals</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Cosmetics</a>
-                                </li>
-                                <li><a href="#">Transportation</a>
-                                </li>
-                                <li><a href="#">Hobbies</a>
-                                </li>
-                                <li><a href="#">Category 8</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.row -->
+              <div class="well">
+                <div class="form-group"> 
+            <form action='#'>
+             <input class="form-control" name="search" type='text'>
+              <button type='submit'>Submit</button>
+              </form> 
+              </div>
+                @if(Auth::check())
                 </div>
                 <div class="well"><a href="{{{ action('PostsController@create') }}}"> Update your blog.</a>
                 </div>
+                @endif
             </div>
         </div>
 

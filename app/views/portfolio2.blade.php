@@ -2,12 +2,10 @@
 
 @section('top-script')
     <title>Sj's Portfolio</title>
-    <link href="../../css/portfolio-item.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 @stop
 
 @section('content')
-
 <div class="container">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -37,8 +35,6 @@
                 </h1>
             </div>
         </div>
-        <!-- /.row -->
-        <!-- Project One -->
         <div class="row">
             <div class="col-md-6">
                 <a href="#">

@@ -26,4 +26,5 @@ class Post extends BaseModel
     {
         return $this->belongsToMany('Category');
     }
+
 }

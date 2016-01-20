@@ -2,7 +2,6 @@
 
 @section('top-script')
     <title>Sj's Portfolio</title>
-    <link href="../../css/portfolio-item.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 @stop
 
@@ -29,66 +28,89 @@
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">My Portfolio
-                <small>projects I have built</small>
-            </h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">My Portfolio
+                    <small>Projects I have built</small>
+                </h1>
+            </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-8">
-            <img class="img-responsive" src="../../img/jemhadar.png" alt="">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="#">
+                    <img class="img-responsive" src="../../img/jemhadar.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Whack-A-Jem'hadar</h3>
+                <h4>A Star Trek based Whack-A-Mole game.</h4>
+                <hr>
+                <p>Destroy the Dominion in this JavaScript, jQuery, and HTML/CSS game.</p>
+                <p>View the Code: https://github.com/sjmrt/Whack-A-Mole Play the game: https://sjmrt.github.io/</p>
+                {{-- <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a> --}}
+            </div>
         </div>
+        <!-- /.row -->
 
-        <div class="col-md-4">
-            <h3>Whack-A-Jem'Hadar</h3>
-            <p>A Star Trek based Whack-A-Mole game.</p>
-            <h3>Built With</h3>
-            <ul>
-                <li>jQuery</li>
-                <li>HTML/CSS</li>
-                <li>https://sjmrt.github.io</li>
-            </ul>
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-6">
+                <a href="#">
+                    <img class="img-responsive" src="img/kriegerslist.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Krieger's List</h3>
+                <h4>Craigslist Clone</h4>
+                <hr>
+                <p>List and sell your stuff with Krieger! Built with PHP, JavaScript, jQuery, MySQL, and HTML/CSS</p>
+                <p>View the Code: https://github.com/adlister-codeup</p>
+                {{-- <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a> --}}
+            </div>
         </div>
+        <!-- /.row -->
 
-    </div>
+        <hr>
 
-    <div class="row">
-
-        <div class="col-lg-12">
-            <h3 class="page-header">Other projects</h3>
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-6">
+                <a href="#">
+                    <img class="img-responsive" src="img/simplesj.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Simple Simon</h3>
+                <h4>Revamp of the classic, with cats!</h4>
+                <hr>
+                <p>A jQuery, HTML/CSS game to test your memory.</p>
+                <p>View the Code: https://github.com/sjmrt/Simple-SJ
+                {{-- <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a> --}}
+            </div>
         </div>
+        <!-- /.row -->
 
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
+        <hr>
 
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
+        <!-- Project Four -->
+        <div class="row">
 
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
+            <div class="col-md-6">
+                <a href="#">
+                    <img class="img-responsive" src="img/myblog.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Laravel blog</h3>
+                <h4>A personal blog page</h4>
+                <hr>
+                <p>Blog, portfolio, and resume built using Laravel, PHP, MySQL, JavaScript, jQuery and Twitter Bootstrap. Developed in a Vagrant environment, includes user logins, blog post creation, viewing, and editing,  image upload, and search functionality</p>
+                <p>View the Code: https://github.com/sjmrt/blog.dev</p>
+                {{-- <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a> --}}
+            </div>
         </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
+        <!-- /.row -->
     </div>
 </div>
-
-@stop
-
-@section('bottom-script')
-
-@stop
