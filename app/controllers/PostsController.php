@@ -131,6 +131,15 @@ class PostsController extends \BaseController {
 
 	}
 
+	public function upload()
+	{
+		$post_id = Input::get('post_id');
+		$image = new Image;
+		$image->post_id = $post_id;
+		$image->img_path = Input::get('img_path');
+		$image->save();
+	}
+
 
 	protected function validateAndSave($post)
 	{
@@ -143,6 +152,7 @@ class PostsController extends \BaseController {
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->subtitle = Input::get('subtitle');
+			$post->image = Input::get('image');
 
 			$userEmail = 
 			$result = $post->save();

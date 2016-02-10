@@ -20,9 +20,9 @@
     	<div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
 	@endif
 
-    @yield('bottom-script')
-
     <script src="/js/jquery-1.11.3.js"></script>
-   	<script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    @yield('bottom-script')
 </body>
 </html>

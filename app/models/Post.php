@@ -22,9 +22,9 @@ class Post extends BaseModel
         return $this->belongsTo('User');
     }
 
-    public function categories()
+    public function images()
     {
-        return $this->belongsToMany('Category');
+        return $this->hasMany('Image');
     }
 
 }

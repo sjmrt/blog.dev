@@ -31,5 +31,7 @@ Route::get('logout', 'HomeController@getLogout');
 
 Route::resource('/blog', 'PostsController'); 
 
+Route::post('upload', 'PostsController@upload');
+
 
 

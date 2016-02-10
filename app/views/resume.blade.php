@@ -51,7 +51,7 @@
         <hr>
         <div id="header" class="row">
             <div class="col-sm-2">
-                <img class="propic" src="img/profilepic.png" alt="">
+                <img class="propic" src="img/codeuppic.png" alt="">
             </div>
             <div class="col-sm-10">
                 <div class="cv-title">
@@ -111,7 +111,7 @@
                 <div class="col-sm-11">
                     <h3>About Me </h3>
                     <p></p>
-
+                        Fully qualified human, definitely not an alien. Saving the world one line of code at a time. 
                     <p></p>
 
                     <p class="signature">Sarajane</p>

@@ -42,9 +42,16 @@
                 <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span> {{{$post->created_at}}} </p>
                
-				<p class="lead">{{{$post->subtitle}}}</p>                
+				<p class="lead">{{{$post->subtitle}}}</p>
+                <div>
+                @foreach($post->images as $image)
+                    <img src="{{{ $image->img_path }}}">
+                @endforeach
+                </div>
 				<p> {{{ $post->body }}} </p>
                 <hr>
+                <script src="//api.filepicker.io/v2/filepicker.js" type="text/javascript"></script>
+                <button id="filestack">Upload a photo</button>
                 {{Form::open(array('action'=> array('PostsController@destroy', $post->id), 'method' => 'DELETE'))}}
                     <button class="btn">Delete Post</button>
                 {{Form::close()}}
@@ -102,3 +109,40 @@
                 </div>
             </div>
         </div>
+@stop
+@section('bottom-script')
+<script type="text/javascript" src="https://api.filestackapi.com/filestack.js"></script>    
+    <script>
+        
+        filepicker.setKey("A7sKrzoQxSfm5fONKpae9z");  
+        
+        // create function for the button
+        function upload(){ 
+            
+            filepicker.pick(
+                {
+                    mimetype: 'image/*', 
+                    container: 'modal', 
+                    services: ['COMPUTER', 'INSTAGRAM', 'FACEBOOK', 'FLICKR', 'PICASA', 'IMAGE_SEARCH'], 
+                    imageDim: [610, 440]
+                }, 
+                function(Blob) {
+                    console.log(Blob); 
+                    console.log(Blob.url); 
+                    
+                    $.ajax("/upload", {
+                        type: "POST",
+                        data: {
+                            post_id: {{{ $post->id }}},
+                            img_path: Blob.url
+                        }
+                    });
+                    
+                }
+            )
+        }; 
+
+        $('#filestack').on('click', upload);
+        
+    </script> 
+@stop

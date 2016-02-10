@@ -12,7 +12,13 @@ class PostTableSeeder extends Seeder {
 			$post1->body = 'zyxwvutsrqponmlkjihgfedcba';
 			$post1->user_id = $user->id;
 			$post1->slug_title = Str::slug($post1->title);
+			
 			$post1->save();
+
+	        $post1_image1 = new Image();
+	        $post1_image1->img_path = '/img/uploads/' . explode("\n", trim(`ls public/img/uploads/`))[0];
+	        $post1_image1->post_id = $post1->id;
+	        $post1_image1->save();
 
 		$post2 = new Post; 
 			$post2->title = 'Doodoo';
