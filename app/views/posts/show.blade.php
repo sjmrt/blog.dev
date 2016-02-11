@@ -46,20 +46,15 @@
                 <div>
                 @foreach($post->images as $image)
                     <img src="{{{ $image->img_path }}}">
+                    <hr>
                 @endforeach
                 </div>
 				<p> {{{ $post->body }}} </p>
                 <hr>
-                <script src="//api.filepicker.io/v2/filepicker.js" type="text/javascript"></script>
-                <button id="filestack">Upload a photo</button>
-                {{Form::open(array('action'=> array('PostsController@destroy', $post->id), 'method' => 'DELETE'))}}
-                    <button class="btn">Delete Post</button>
-                {{Form::close()}}
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4">
-
                 <!-- Blog Search Well -->
                 <div class="well">
                     <h4>Search the Borg</h4>
@@ -68,45 +63,21 @@
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button">
                                 <span class="glyphicon glyphicon-search"></span>
-                        </button>
+                            </button>
                         </span>
                     </div>
                     <!-- /.input-group -->
                 </div>
-
-                <!-- Blog Categories Well -->
+                @if(Auth::check())
                 <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Career</a>
-                                </li>
-                                <li><a href="#">Domesticity</a>
-                                </li>
-                                <li><a href="#">Star Trek</a>
-                                </li>
-                                <li><a href="#">Animals</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Cosmetics</a>
-                                </li>
-                                <li><a href="#">Transportation</a>
-                                </li>
-                                <li><a href="#">Hobbies</a>
-                                </li>
-                                <li><a href="#">Category 8</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.row -->
+                    <a href="{{{ action('PostsController@create') }}}"> Update your blog.</a>
+                    <script src="//api.filepicker.io/v2/filepicker.js" type="text/javascript"></script>
+                    <button class="btn-success" id="filestack">Upload a photo</button>
+                    {{Form::open(array('action'=> array('PostsController@destroy', $post->id), 'method' => 'DELETE'))}}
+                    <button class="btn-danger">Delete Post</button>
+                    {{Form::close()}}
                 </div>
-                <div class="well"><a href="{{{ action('PostsController@create') }}}"> Update your blog.</a>
-                </div>
+                @endif
             </div>
         </div>
 @stop

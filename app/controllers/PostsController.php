@@ -119,7 +119,12 @@ class PostsController extends \BaseController {
 	public function destroy($id)
 	{
 		$post = Post::find($id);
+		$images = $post->images;
+		foreach($images as $image){
+			$image->delete();
+		}
 		$post->delete();
+
 		return Redirect::action('PostsController@index');
 
 	}
@@ -148,7 +153,7 @@ class PostsController extends \BaseController {
     	if ($validator->fails()) {
 			return Redirect::back()->withInput()->withErrors($validator);   	 	
 		} else {
-	        $post->user_id = 1;
+	        $post->user_id = Auth::id();
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->subtitle = Input::get('subtitle');
