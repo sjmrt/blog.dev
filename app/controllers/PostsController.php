@@ -86,8 +86,6 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		
-
 		$post = Post::find($id);
 
 		return View::make('posts.edit')->with('post', $post);	
@@ -128,6 +126,21 @@ class PostsController extends \BaseController {
 		return Redirect::action('PostsController@index');
 
 	}
+
+	// 	/**
+	//  * Remove the specified resource from storage.
+	//  *
+	//  * @param  int  $id
+	//  * @return Response
+	//  */
+	// public function destroyImage($id)
+	// {
+	// 	$post = Post::find($id);
+
+	// 	$images = $post->images;
+
+	// 	return View::make('posts.show')->with('post', $post);
+	// }
 	
 	public function view(Post $post)
 	{

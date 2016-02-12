@@ -73,6 +73,9 @@
                     <a href="{{{ action('PostsController@create') }}}"> Update your blog.</a>
                     <script src="//api.filepicker.io/v2/filepicker.js" type="text/javascript"></script>
                     <button class="btn-success" id="filestack">Upload a photo</button>
+                    {{ Form::open(array('action' => array('PostsController@edit', $post->id), 'method' => 'GET')) }}                    
+                    <button class="btn-warning">Edit Post</button>
+                    {{Form::close()}}
                     {{Form::open(array('action'=> array('PostsController@destroy', $post->id), 'method' => 'DELETE'))}}
                     <button class="btn-danger">Delete Post</button>
                     {{Form::close()}}
@@ -114,6 +117,7 @@
         }; 
 
         $('#filestack').on('click', upload);
+
         
     </script> 
 @stop

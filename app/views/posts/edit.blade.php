@@ -21,7 +21,14 @@
 	    {{ Form::label('body', 'Body') }}
 		{{ Form::textarea('body', $post->body, ['class' => 'form-control'] ) }}
 	  </div>
-	  <input name="user_id" type="hidden" value="1">
+{{-- 		@foreach($post->images as $image)
+            <img src="{{{ $image->img_path }}}">
+            {{Form::open(array('action'=> array('PostsController@destroyImage', $post->id), 'method' => 'DELETE'))}}
+            <button id="imgdelete" class="btn-danger">Delete Photo</button>
+            {{ Form::close() }}
+            <hr>
+        @endforeach	 --}}  
+        <input name="user_id" type="hidden" value="1">
 	  <button type="submit" class="btn btn-default">Submit</button>
 </div>
 {{ Form::close() }}
